@@ -1,0 +1,7 @@
+version: "3"
+services:
+  build-terraform:
+    image: hashicorp/terraform:1.9.3
+    container_name: terraform_execute
+    volumes:
+      - ./terraform:/tmp/terraform
