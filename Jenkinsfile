@@ -5,7 +5,7 @@ pipeline {
 
 
         GOOGLE_CLOUD_PROJECT = 'terraform-tms-424012'
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-service-account-key')
+//         GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-service-account-key')
     }
 
     stages {
