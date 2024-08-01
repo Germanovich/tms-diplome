@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh "docker compose -f compose-teffarorm.yml up -d"
+                    sh "docker compose -f compose-terraform.yml up -d"
                     sh "docker exec terraform_execute /bin/bash teraform init"
                     sh "docker exec terraform_execute /bin/bash teraform apply -auto-approve"
 
