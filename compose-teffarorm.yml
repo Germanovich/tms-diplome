@@ -3,5 +3,6 @@ services:
   build-terraform:
     image: hashicorp/terraform:1.9.3
     container_name: terraform_execute
+    tty: true
     volumes:
       - ./terraform:/tmp/terraform
