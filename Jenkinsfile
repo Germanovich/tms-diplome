@@ -1,5 +1,5 @@
 pipeline {
-
+    agent { label 'master' }
     environment {
         DOCKER_IMAGE = 'hello-world-node'  // Имя Docker образа
 
@@ -30,7 +30,6 @@ pipeline {
         }
 
         stage('Web push') {
-            agent { label 'master' }
             steps {
                  script {
                     def app = sh(script: "gcloud compute instances describe terraform-tms-424012 --zone=us-east1-c --format='get(networkInterfaces[0].accessConfigs[0].natIP)'", returnStdout: true).trim()
