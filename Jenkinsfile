@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'master' }
+    agent any
     environment {
         DOCKER_IMAGE = 'hello-world-node'  // Имя Docker образа
 
